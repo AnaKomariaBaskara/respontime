@@ -44,7 +44,7 @@ class PemeriksaanController extends Controller
             'pasien_id' => $pasien_baru->id,
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with(['reload' => 'true']);
     }
 
     public function update($id)

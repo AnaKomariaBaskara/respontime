@@ -50,7 +50,7 @@
                                                 @csrf
                                                 @method('put')
 
-                                                <button type="submit" class="btn btn-sm btn-success"><i class="far fa-check-circle mr-2"></i> Selesai</button>
+                                                <button type="submit" class="btn btn-sm btn-success btn-done"><i class="far fa-check-circle mr-2"></i> Selesai</button>
                                             </form>
                                             @endif
 
@@ -192,6 +192,16 @@
     <script>
         $(function() {
             $('#penyakit').DataTable();
+        });
+
+        $(document).ready(function(){
+            @if(session()->has('reload'))
+                localStorage.setItem('reload', 'true');
+            @endif
+        });
+
+        $('.btn-done').on('click', function(){
+            localStorage.setItem('reload', 'true');
         });
     </script>
 @endpush
