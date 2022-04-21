@@ -79,8 +79,8 @@ class PemeriksaanController extends Controller
             'tglSelesai.after_or_equal' => 'Tanggal tidak boleh mundur',
         ]);
 
-        $startDate = $request->tglMulai;
-        $endDate = $request->tglSelesai;
+        $startDate = $request->tglMulai . ' 00:00:00';
+        $endDate = $request->tglSelesai . ' 23:59:59';
         // $pemeriksaan = Pemeriksaan::whereBetween('created_at', [$startDate, $endDate])->get();
 
         return Excel::download(new PemeriksaanExport($startDate, $endDate), 'pemeriksaan.xlsx');

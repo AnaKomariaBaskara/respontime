@@ -128,7 +128,7 @@
         </div>
     </div>
 
-<!-- Modal Create -->
+<!-- Modal Export -->
 <div class="modal fade" id="export" tabindex="-1" aria-labelledby="exportLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

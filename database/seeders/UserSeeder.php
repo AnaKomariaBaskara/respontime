@@ -24,9 +24,9 @@ class UserSeeder extends Seeder
         $user->assignRole('Admin');
 
         $petugas = User::create([
-            'name' => '',
-            'email' => '',
-            'password' => bcrypt('')
+            'name' => 'Ahmad Fauzi Rahman',
+            'email' => 'fauzi@respontime.com',
+            'password' => bcrypt('password')
         ]);
 
         $petugas->assignRole('Petugas Lab');
